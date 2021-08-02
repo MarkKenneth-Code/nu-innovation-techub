@@ -1,0 +1,52 @@
+.banner {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.banner img {
+  width: 100%;
+  min-height: 250px;
+  object-fit: cover;
+}
+
+.banner-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.banner-label img {
+  width: 20%;
+  height: 20%;
+  object-fit: contain;
+}
+.banner-label h1 {
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.sections-navigation {
+  background-color: #181e4a;
+}
+
+.sections-navigation div {
+  padding: 0 150px;
+}
+
+.sections-navigation a {
+  text-decoration: none;
+  color: white;
+  font-weight: 200;
+}
+
+.section-content {
+  height: 100vh;
+}
+
+.section-content .text-darkblue {
+  color: #354092;
+}
