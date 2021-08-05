@@ -1,15 +1,14 @@
-import { useEffect, useState } from 'react';
-import { productData } from '../../mockdata/ProductsData';
-import ProductItem from './ProductItem';
+import { useEffect, useState } from "react";
+import { productData } from "../../mockdata/ProductsData";
+import ProductItem from "./ProductItem";
 
 export default function Innovations() {
   const [items, setItems] = useState(null);
 
   useEffect(() => {
-    console.log('fetch');
     setItems(
       productData
-        .filter((item) => item.productType === 'innovations')
+        .filter((item) => item.productType === "innovations")
         .map((item) => (
           <ProductItem
             productID={item.productID}
@@ -26,11 +25,10 @@ export default function Innovations() {
       <div className="d-flex justify-content-between">
         {items && (
           <>
-            {console.log(items)}
             <div>
               <h2>Innovations</h2>
               <p>
-                Showing {items.length} {items.length > 1 ? 'results' : 'result'}
+                Showing {items.length} {items.length > 1 ? "results" : "result"}
               </p>
             </div>
             <div>
@@ -52,7 +50,9 @@ export default function Innovations() {
         )}
       </div>
 
-      <div className="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xxl-5">{items}</div>
+      <div className="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xxl-5">
+        {items}
+      </div>
     </div>
   );
 }

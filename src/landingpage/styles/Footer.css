@@ -1,0 +1,46 @@
+.footer-links h4,
+.footer-address h4,
+.footer-subscription h4 {
+  letter-spacing: 1px;
+  color: white;
+}
+
+.footer {
+  background-color: #230871;
+  color: #d9dbe1;
+  padding: 3rem 0;
+}
+
+.footer-links a {
+  color: inherit;
+  font-weight: 300;
+  margin-top: 12px;
+  text-decoration: none;
+}
+
+address div {
+  display: flex;
+  align-items: center;
+  word-wrap: break-word;
+  max-width: 320px;
+  margin-bottom: 8px;
+}
+
+address div svg {
+  margin-right: 10px;
+}
+
+address p {
+  margin: 0;
+  color: inherit;
+  font-weight: 300;
+}
+
+label svg {
+  margin: 0 0 5px 10px;
+  cursor: pointer;
+}
+
+input {
+  margin-top: 12px;
+}

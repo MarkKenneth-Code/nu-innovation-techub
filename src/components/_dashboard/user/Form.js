@@ -4,11 +4,12 @@ import { TextField } from '@material-ui/core';
 import { FormControl } from '@material-ui/core';
 import { Select } from '@material-ui/core';
 import { InputLabel } from '@material-ui/core';
+import { Form, Col, Row } from 'react-bootstrap';
+import FloatingLabel from 'react-bootstrap-floating-label';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    marginTop: '55px',
-    marginLeft: '37px',
+    marginTop: '60px',
     '& .MuiTextField-root': {
       margin: '7px',
       width: '25ch'
@@ -27,68 +28,35 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Forms() {
   const classes = useStyles();
-  const [state, setState] = React.useState({
-    age: '',
-    name: 'hai'
-  });
-  const handleChange1 = (event) => {
-    const name = event.target.name;
-    setState({
-      ...state,
-      [name]: event.target.value
-    });
-  };
-  const handleChange2 = (event) => {
-    const name = event.target.name;
-    setState({
-      ...state,
-      [name]: event.target.value
-    });
-  };
   return (
     <form className={classes.root} noValidate autoComplete="off">
       <div>
-        <TextField id="standard-fName" label="First Name" />
-        <TextField id="standard-lName" label="Last Name" />
-        <TextField id="standard-mName" label="Middle Name" />
-        <TextField id="standard-mName" label="Company" />
-        <TextField id="standard-mName" label="Role" />
-        <FormControl variant="outlined" className={classes.dropDown1}>
-          <InputLabel htmlFor="outlined-age-native-simple">Dropdown 1</InputLabel>
-          <Select
-            native
-            value={state.age}
-            onChange={handleChange1}
-            label="Age"
-            inputProps={{
-              name: 'age',
-              id: 'outlined-age-native-simple'
-            }}
-          >
-            <option aria-label="None" value="" />
-            <option value={10}>Ten</option>
-            <option value={20}>Twenty</option>
-            <option value={30}>Thirty</option>
-          </Select>
-        </FormControl>
-        <FormControl variant="outlined" className={classes.dropDown2}>
-          <InputLabel htmlFor="outlined-age-native-simple">Dropdown 2</InputLabel>
-          <Select
-            native
-            value={state.age}
-            onChange={handleChange2}
-            label="Age"
-            inputProps={{
-              name: 'age',
-              id: 'outlined-age-native-simple'
-            }}
-          >
-            <option aria-label="None" value="" />
-            <option value={10}>1</option>
-            <option value={20}>2</option>
-            <option value={30}>3</option>
-          </Select>
-        </FormControl>
+        <Form>
+          <Row>
+            <Col>
+              <Form.Control placeholder="First name" size="lg" />
+            </Col>
+            <Col>
+              <Form.Control placeholder="Last name" size="lg" />
+            </Col>
+          </Row>
+          <Form.Group className="mb-3" controlId="formGridAddress1">
+            <Form.Control placeholder="Address" size="lg" />
+          </Form.Group>
+          <div class="form-floating">
+            <select
+              class="form-select"
+              id="floatingSelect"
+              aria-label="Floating label select example"
+            >
+              <option selected>Open this select menu</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+            <label for="floatingSelect">Works with selects</label>
+          </div>
+        </Form>
       </div>
     </form>
   );

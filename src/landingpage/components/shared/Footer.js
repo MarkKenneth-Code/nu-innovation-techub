@@ -1,6 +1,6 @@
-import DTILogo from '../../assets/DTI.png';
-import NULogo from '../../assets/NU-Logo-old.png';
-import '../../styles/Footer.css';
+import DTILogo from "../../assets/DTI.png";
+import NULogo from "../../assets/NU-Logo-old.png";
+import "../../styles/Footer.css";
 
 export default function Footer() {
   return (
@@ -40,7 +40,10 @@ export default function Footer() {
                   >
                     <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
                   </svg>
-                  <p>National University-Manila, M.F. Jhocson Street, Sampaloc, Manila</p>
+                  <p>
+                    National University-Manila, M.F. Jhocson Street, Sampaloc,
+                    Manila
+                  </p>
                 </div>
                 <div>
                   <svg

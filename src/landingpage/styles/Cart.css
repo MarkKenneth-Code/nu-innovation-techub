@@ -1,0 +1,43 @@
+.personal-info {
+  width: 65%;
+}
+
+.cart-items {
+  width: 35%;
+}
+
+.items-container {
+  min-height: 400px;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.product-image {
+  width: 15%;
+  background-color: #efefef;
+}
+
+.product-image--small {
+  width: auto;
+  height: 70px;
+}
+
+.product-details {
+  width: 85%;
+}
+
+.breadcrumb-item a {
+  text-decoration: none;
+}
+@media only screen and (max-width: 767px) {
+  .personal-info {
+    width: 100%;
+  }
+
+  .cart-items {
+    width: 100%;
+  }
+  .items-container {
+    max-height: 250px;
+  }
+}

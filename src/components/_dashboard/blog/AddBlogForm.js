@@ -18,18 +18,9 @@ const useStyles = makeStyles(() => ({
     }
   },
   filepicker: {
-    marginLeft: '5px',
-    marginBottom: '5px',
     border: '1px solid #d2d9d4',
-    color: 'blue',
-    borderRadius: '10px',
-    width: '35ch',
-    height: '50px'
-  },
-  button: {
-    marginTop: '13px',
-    marginLeft: '10px',
-    textSizeAdjust: '60px'
+    borderRadius: '3px'
+    // color: '#354092'
   }
 }));
 
@@ -48,17 +39,18 @@ export default function AddBlogForm() {
   return (
     <form className={classes.root} noValidate autoComplete="off">
       <div>
-        <Form.Group controlId="formFile" className={classes.filepicker}>
+        {/* <Form.Group controlId="formFile" className={classes.filepicker}>
           <Form.Control type="file" className={classes.button} />
+        </Form.Group> */}
+        <Form.Group controlId="formFileSm">
+          <Form.Control type="file" />
         </Form.Group>
-        <TextField id="standard-pName" label="Title" />
-        <TextField
-          id="outlined-multiline-static"
-          label="Description"
-          multiline
-          rows={7}
-          variant="outlined"
-        />
+        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+          <Form.Control size="lg" type="text" placeholder="Title" />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+          <Form.Control size="lg" as="textarea" rows={7} placeholder="Description" />
+        </Form.Group>
       </div>
     </form>
   );

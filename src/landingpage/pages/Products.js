@@ -8,10 +8,8 @@ import Souvenirs from '../components/products/Souvenirs';
 import Footer from '../components/shared/Footer';
 import ProductDetail from '../components/products/ProductDetail';
 import { Helmet } from 'react-helmet';
-
 export default function Products() {
-  // let match = useMatch();
-  // console.log(match);
+  // let { path } = useRouteMatch();
 
   return (
     <>
@@ -35,28 +33,4 @@ export default function Products() {
       <Footer />
     </>
   );
-
-  // return useRoutes (
-  //   <>
-  //     <Helmet>
-  //       <title>Products | NU TechHub</title>
-  //     </Helmet>
-  //     <NavBar />
-  //     <Banner label="PRODUCTS" />
-  //     <BrowserRouter>
-  //       <Routes>
-
-  //         {/* <Route path={`${path}/innovations`} component={Innovations} exact />
-  //         <Route path={`${path}/books`} component={Books} exact />
-  //         <Route path={`${path}/souvenirs`} component={Souvenirs} exact />
-
-  //         <Route path={`${path}/innovations/:productID`} component={ProductDetail} />
-  //         <Route path={`${path}/books/:productID`} component={ProductDetail} />
-  //         <Route path={`${path}/souvenirs/:productID`} component={ProductDetail} /> */}
-  //       </Routes>
-  //     </BrowserRouter>
-
-  //     <Footer />
-  //   </>
-  // );
 }

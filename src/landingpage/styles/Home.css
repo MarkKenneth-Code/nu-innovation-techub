@@ -1,0 +1,110 @@
+/* Banner section */
+.banner {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.banner img {
+  width: 100%;
+  min-height: 250px;
+  object-fit: cover;
+}
+
+.banner-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.banner-label img {
+  width: 20%;
+  height: 20%;
+  object-fit: contain;
+}
+.banner-label h1 {
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+/* Navigation for section */
+.sections-navigation {
+  background-color: #181e4a;
+}
+
+.sections-navigation div {
+  padding: 0 150px;
+}
+
+.sections-navigation a {
+  text-decoration: none;
+  color: white;
+  font-weight: 200;
+}
+
+/* .section-content {
+  height: 100vh;
+} */
+
+.text-darkblue {
+  color: #354092;
+}
+
+.text-gold {
+  color: #d8b638;
+}
+
+.section-content-inquire {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(45, 8, 154, 0.75),
+      rgba(216, 182, 56, 0.75)
+    ),
+    url("../assets/Inquire_background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  /* height: 70vh; */
+}
+
+.section-feature svg {
+  color: #d8b638;
+  margin-bottom: 10px;
+}
+
+.section-feature h4,
+.section-feature p {
+  text-align: center;
+}
+
+/* Card carousel */
+
+.card-carousel {
+  overflow-x: scroll;
+}
+
+.chevron-control div {
+  cursor: pointer;
+}
+
+.stories-container img {
+  height: 250px;
+  object-fit: cover;
+  background-color: #efefef;
+}
+
+.stories-container h5 {
+  color: #354092;
+}
+
+.exhibit-image {
+  height: 600px;
+  object-fit: cover;
+}
+.exhibit-info {
+  background-color: rgba(0, 0, 0, 0.5);
+}

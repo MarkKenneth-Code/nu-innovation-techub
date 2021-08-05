@@ -83,7 +83,7 @@ export default function ShopFilterSidebar({
             open={isOpenFilter}
             onClose={onCloseFilter}
             PaperProps={{
-              sx: { width: 400, border: 'none', overflow: 'hidden' }
+              sx: { width: 600, border: 'none', overflow: 'hidden' }
             }}
           >
             <Stack

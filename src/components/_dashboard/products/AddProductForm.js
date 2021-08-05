@@ -6,11 +6,12 @@ import NumberFormat from 'react-number-format';
 import PropTypes from 'prop-types';
 import { Form } from 'react-bootstrap';
 import { border, color, width } from '@material-ui/system';
+import FloatingLabel from 'react-bootstrap-floating-label';
 
 const useStyles = makeStyles(() => ({
   root: {
     marginTop: '60px',
-    // marginLeft: '60px',
+    // marginLeft: '15px',
 
     '& .MuiTextField-root': {
       margin: '5px',
@@ -18,18 +19,15 @@ const useStyles = makeStyles(() => ({
     }
   },
   filepicker: {
-    marginLeft: '5px',
-    marginBottom: '5px',
+    // marginLeft: '5px',
+    // marginBottom: '5px',
     border: '1px solid #d2d9d4',
-    color: 'blue',
-    borderRadius: '10px',
-    width: '35ch',
-    height: '50px'
+    borderRadius: '3px',
+    color: '#354092'
   },
-  button: {
-    marginTop: '13px',
-    marginLeft: '10px',
-    textSizeAdjust: '60px'
+  price: {
+    width: '35ch',
+    borderRadius: '3px'
   }
 }));
 
@@ -75,18 +73,31 @@ export default function AddProductForms() {
   return (
     <form className={classes.root} noValidate autoComplete="off">
       <div>
-        <Form.Group controlId="formFile" className={classes.filepicker}>
+        {/* <Form.Group controlId="formFile" className={classes.filepicker}>
           <Form.Control type="file" className={classes.button} />
+        </Form.Group> */}
+        <Form.Group controlId="formFileSm">
+          <Form.Control type="file" />
         </Form.Group>
-        <TextField id="standard-pName" label="Product Name" />
-        <TextField
-          id="outlined-multiline-static"
-          label="Description"
-          multiline
-          rows={4}
-          variant="outlined"
-        />
-        <TextField
+        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+          <Form.Control size="lg" type="text" placeholder="Product Name" />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+          <Form.Control size="lg" as="textarea" rows={5} placeholder="Product Description " />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+          <Form.Control
+            size="lg"
+            type="number"
+            placeholder="Price"
+            onChange={handleChange}
+            InputProps={{
+              inputComponent: NumberFormatCustom
+            }}
+          />
+        </Form.Group>
+        {/* <TextField
+          className={classes.price}
           label="Price"
           onChange={handleChange}
           name="numberformat"
@@ -94,7 +105,7 @@ export default function AddProductForms() {
           InputProps={{
             inputComponent: NumberFormatCustom
           }}
-        />
+        /> */}
       </div>
     </form>
   );

@@ -1,9 +1,9 @@
-import Banner from "../components/home/Banner";
-import NavBar from "../components/shared/NavBar";
-import Footer from "../components/shared/Footer";
-import LatestStories from "../components/home/LatestStories";
-import FeaturedProducts from "../components/home/FeaturedProducts";
-import Exhibits from "../components/home/Exhibits";
+import Banner from '../components/home/Banner';
+import NavBar from '../components/shared/NavBar';
+import Footer from '../components/shared/Footer';
+import LatestStories from '../components/home/LatestStories';
+import FeaturedProducts from '../components/home/FeaturedProducts';
+import Exhibits from '../components/home/Exhibits';
 
 export default function Home() {
   return (
