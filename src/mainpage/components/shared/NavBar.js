@@ -1,15 +1,15 @@
-import { Nav, Navbar, NavDropdown, Container } from "react-bootstrap";
-import NULogo from "../../assets/NU-Logo.png";
-import "../../styles/NavBar.css";
+import { Nav, Navbar, NavDropdown, Container } from 'react-bootstrap';
+import NULogo from '../../assets/NU-Logo.png';
+import '../../styles/NavBar.css';
 export default function NavBar() {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
-        <Navbar.Brand className="d-flex" href="/">
+        <Navbar.Brand className="d-flex" href="/home">
           <img src={NULogo} alt="" className="pr-2 d-none d-sm-block" />
           <span>&nbsp;&nbsp;&nbsp;</span>
           <span className="navbar-label">
-            {" "}
+            {' '}
             NU INNOVATION TECH HUB
             <br />
             <small className="fw-light fs-6 d-block">

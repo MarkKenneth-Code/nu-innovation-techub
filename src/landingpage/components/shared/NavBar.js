@@ -1,16 +1,16 @@
-import { Nav, Navbar, NavDropdown, Container } from "react-bootstrap";
-import NULogo from "../../assets/NU-Logo.png";
-import "../../styles/NavBar.css";
+import { Nav, Navbar, NavDropdown, Container } from 'react-bootstrap';
+import NULogo from '../../assets/NU-Logo.png';
+import '../../styles/NavBar.css';
 export default function NavBar() {
   return (
-    <Navbar expand="xl" variant="dark" className="navbar-bg" sticky="top">
+    <Navbar expand="xl" variant="dark" className="navbar-bg">
       <Container>
-        <Navbar.Brand className="d-flex" href="/">
+        <Navbar.Brand className="d-flex" href="/home">
           <img src={NULogo} alt="" className="pr-2 d-none d-sm-block" />
           <span>&nbsp;&nbsp;&nbsp;</span>
           <span className="navbar-label">
-            {" "}
-            NU INNOVATION TECH HUB
+            {' '}
+            <span className="navbar-mainlabel"> NU INNOVATION TECH HUB</span>
             <br />
             <small className="fw-light fs-6 d-block">
               Center for Innovation &amp; Entrepreneurship
@@ -26,11 +26,7 @@ export default function NavBar() {
             <Nav.Link className="m-0" href="/innovators">
               INNOVATORS
             </Nav.Link>
-            <NavDropdown
-              className="exhibit-dropdown"
-              title="EXHIBITS"
-              id="basic-nav-dropdown"
-            >
+            <NavDropdown className="exhibit-dropdown" title="EXHIBITS" id="basic-nav-dropdown">
               <NavDropdown.Item className="m-0" href="/exhibit">
                 Exhibit 2021
               </NavDropdown.Item>
@@ -53,7 +49,7 @@ export default function NavBar() {
                 width="22"
                 height="22"
                 fill="currentColor"
-                class="bi bi-cart"
+                className="bi bi-cart"
                 viewBox="0 0 16 16"
               >
                 <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />

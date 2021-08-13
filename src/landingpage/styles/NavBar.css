@@ -15,7 +15,10 @@ small {
 .navbar-link {
   color: white;
 }
-
+.navbar-mainlabel {
+  color: white;
+  font-size: large;
+}
 .nav-link {
   color: white !important;
 }
