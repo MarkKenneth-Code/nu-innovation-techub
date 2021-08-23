@@ -19,7 +19,7 @@ export default function ContactUs() {
       <div className = "container my-5">
       <div className="row">
         <div className="column">
-          <div className="card">
+          <div className="card2">
           <img src={visit}/>
             <h3>VISIT US</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque morbi venenatis duis venenatis eu donec leo.</p>
@@ -28,7 +28,7 @@ export default function ContactUs() {
         </div>
 
         <div className="column">
-          <div className="card">
+          <div className="card2">
           <img src={phone}/>
             <h3>CALL US</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque morbi venenatis duis venenatis eu donec leo.</p>
@@ -37,7 +37,7 @@ export default function ContactUs() {
         </div>
   
         <div className="column">
-          <div className="card">
+          <div className="card2">
           <img src={mail}/>
             <h3>EMAIL US</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque morbi venenatis duis venenatis eu donec leo.</p>

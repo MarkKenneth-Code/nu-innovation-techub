@@ -27,15 +27,15 @@
     }
   } 
   
-  .card {
+  .card2 {
     text-align: center;
     border-style: none; 
     margin: auto;
   } 
 
-  .card img {
-      width: 200px;
-      height: 200px;
+  .card2 img {
+      width: 150px;
+      height: 150px;
       margin: auto;
   }
 

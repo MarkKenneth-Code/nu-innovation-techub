@@ -5,7 +5,7 @@ import { achievementsData } from "../../mockdata/AchievementsData";
 import AchievementItem from "./AchievementItem";
 
 
-export default function AchievementDetail() {
+export default function Achievement() {
   const [items, setItems] = useState(null);
 
   useEffect(() => {

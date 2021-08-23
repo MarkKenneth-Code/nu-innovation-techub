@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { innovatorsData } from "../../mockdata/InnovatorsData";
 import InnovatorItem from "./InnovatorItem";
 
-export default function InnovatorDetail() {
+export default function Innovator() {
   const [items, setItems] = useState(null);
 
   useEffect(() => {

@@ -10,14 +10,14 @@ import innov3 from "../assets/innov3.png";
 import achieve1 from "../assets/achieve1.png";
 import achieve2 from "../assets/achieve2.png";
 import achieve3 from "../assets/achieve3.png";
-import { Route, Switch, useRouteMatch } from "react-router-dom";
+import {Route, Switch, useRouteMatch } from "react-router-dom";
 import Innovator from "../components/innovators/Innovator";
 import Achievement from "../components/innovators/Achievement";
 import InnovatorDetail from "../components/innovators/InnovatorDetail";
 import AchievementDetail from "../components/innovators/AchievementDetail";
 
 export default function Innovators() {
-  let { path } = useRouteMatch();
+  //let { path } = useRouteMatch();
 
   return (
     <>
@@ -25,14 +25,14 @@ export default function Innovators() {
         <title>Innovators | NU TechHub</title>
       </Helmet>
       <NavBar />
-      <Banner label="INNOVATORS &amp; STORIES" />   
-      <Switch>
-        <Route path={`${path}/innovator`} component={Innovator} exact />
-        <Route path={`${path}/achievement`} component={Achievement} exact />
+      <Banner label="INNOVATORS &amp; STORIES" />  
+
+        <Route path={`innovators/innovator`} component={Innovator} exact />
+        {/*<Route path={`${path}/achievement`} component={Achievement} exact />
         
         <Route path={`${path}/innovator/:innovatorID`} component={InnovatorDetail} />
-        <Route path={`${path}/achievement/:achievementID`} component={AchievementDetail} />
-      </Switch>
+  <Route path={`${path}/achievement/:achievementID`} component={AchievementDetail} />*/}
+
       <Footer />
     </>
   );

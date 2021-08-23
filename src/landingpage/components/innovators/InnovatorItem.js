@@ -1,8 +1,8 @@
 import "../../styles/Innovators.css";
-import { useRouteMatch } from "react-router-dom";
+import { useRoutes } from "react-router-dom";
 
 export default function InnovatorItem(props) {
-  let path = useRouteMatch();
+  //let path = useRoutes();
   const { innovatorImage, innovatorID, innovatorTitle, innovatorDate, innovatorDescription } = props;
 
   return (
@@ -12,7 +12,7 @@ export default function InnovatorItem(props) {
             <h3 className="card-h3">{innovatorTitle}</h3>
             <p className="card-p1">{innovatorDate}</p>
             <p className="card-p2">{innovatorDescription}</p>
-            <button className="button1"><a href={`${path.url}/${innovatorID}`}>Read more</a></button>
+            <button className="button1"><a href={`innovators/innovator/${innovatorID}`}>Read more</a></button>
         </div>
       </div>
   );

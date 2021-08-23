@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import { useRouteMatch } from "react-router-dom";
+import { useRoutes } from 'react-router-dom';
 import { innovatorsData } from "../../mockdata/InnovatorsData";
 import "../../styles/Innovators.css";
 
 export default function InnovatorDetail() {
-  let path = useRouteMatch();
+  let path = useRoutes();
   const [innovatorDetail, setInnovatorDetail] = useState(null);
 
   useEffect(() => {

@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import { useRouteMatch } from "react-router-dom";
+import { useRoutes } from "react-router-dom";
 import { achievementsData } from "../../mockdata/AchievementsData";
 import "../../styles/Innovators.css";
 
 export default function AchievementDetail() {
-  let path = useRouteMatch();
+  let path = useRoutes();
   const [achievementDetail, setAchievementDetail] = useState(null);
 
   useEffect(() => {

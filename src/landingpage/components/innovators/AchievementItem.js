@@ -1,8 +1,8 @@
 import "../../styles/Innovators.css";
-import { useRouteMatch } from "react-router-dom";
+import { useRoutes } from "react-router-dom";
 
 export default function AchievementItem(props) {
-  let path = useRouteMatch();
+  //let path = useRoutes();
   const { achievementImage, achievementID, achievementTitle, achievementDate, achievementDescription } = props;
 
   return (
@@ -12,7 +12,7 @@ export default function AchievementItem(props) {
             <h3 className="card-h3">{achievementTitle}</h3>
             <p className="card-p1">{achievementDate}</p>
             <p className="card-p2">{achievementDescription}</p>
-            <button className="button1"><a href={`${path.url}/${achievementID}`}>Read more</a></button>
+            <button className="button1"><a href={`innovators/achievement/${achievementID}`}>Read more</a></button>
         </div>
       </div>
   );
