@@ -15,6 +15,8 @@ import Home from './landingpage/pages/Home';
 import Innovations from './mainpage/components/products/Innovations';
 import Books from './mainpage/components/products/Books';
 import Souvenirs from './mainpage/components/products/Souvenirs';
+import Achievement from './mainpage/components/innovators/Achievement';
+import Innovator from './mainpage/components/innovators/Innovator';
 
 // const Home = lazy(() => import('./mainpage/pages/Home'));
 
@@ -37,7 +39,12 @@ export default function Router() {
     },
     {
       path: '/innovators',
-      element: <Innovators />
+      element: <Innovators />,
+      children: [
+        { path: '/', element: <Navigate to="/innovators/innovator" replace /> },
+        { path: 'innovator', element: <Innovator /> },
+        { path: 'achievement', element: <Achievement /> }
+      ]
     },
     {
       path: '/aboutus',
