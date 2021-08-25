@@ -1,12 +1,12 @@
-import banner from "../../assets/Home-Banner.png";
-import NULogo from "../../assets/NU-Logo-home.png";
-import "../../styles/Home.css";
+import banner from '../../assets/Home-Banner.png';
+import NULogo from '../../assets/NU-Logo-home.png';
+import '../../styles/Home.css';
 export default function Banner() {
   return (
     <div className="banner">
-      <img src={banner} alt="" />
+      <img src={banner} alt="" className="banner-background" />
       <div className="banner-label">
-        {/* <img src={NULogo} alt="" /> */}
+        <img src={NULogo} alt="" />
         {/* <h1>National-U Innovation Tech Hub</h1>
         <p>Center for Innovation &amp; Entrepreneurship</p> */}
       </div>
