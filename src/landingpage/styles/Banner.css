@@ -35,6 +35,6 @@ div > a:hover {
   color: white;
 }
 
-.product-links > a:not(:last-child) {
+.product-links {
   margin-right: 5rem;
 }
