@@ -3,7 +3,7 @@ import { useRoutes } from 'react-router-dom';
 
 export default function ProductItem(props) {
   // let path = useRoutes();
-  const { productID, productName, productImage, owner } = props;
+  const { productID, productName, productImage, owner, productPrice } = props;
 
   return (
     <div className="col mb-4">
@@ -12,7 +12,8 @@ export default function ProductItem(props) {
         <div className="card-body">
           <h5 className="card-title text-truncate">{productName}</h5>
           <h6 class="card-subtitle mb-2 text-muted text-truncate">{owner.join(', ')}</h6>
-          <a href={`products/innovations/${productID}`} className="btn btn-primary">
+          {productPrice && <p class="card-text text-success">₱{productPrice}</p>}
+          <a href={`${productID}`} className="btn btn-primary">
             View Item
           </a>
         </div>

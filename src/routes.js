@@ -17,6 +17,7 @@ import Books from './mainpage/components/products/Books';
 import Souvenirs from './mainpage/components/products/Souvenirs';
 import Achievement from './mainpage/components/innovators/Achievement';
 import Innovator from './mainpage/components/innovators/Innovator';
+import ProductDetail from './landingpage/components/products/ProductDetail';
 
 // const Home = lazy(() => import('./mainpage/pages/Home'));
 
@@ -68,6 +69,11 @@ export default function Router() {
         { path: 'souvenirs', element: <Souvenirs /> }
       ]
     },
+    {
+      path: '/products/:id',
+      element: <ProductDetail />
+    },
+
     {
       path: '/',
       element: <LogoOnlyLayout />,

@@ -13,7 +13,7 @@ export default function ProductItem(props) {
           <h5 className="card-title text-truncate">{productName}</h5>
           <h6 class="card-subtitle mb-2 text-muted text-truncate">{owner.join(', ')}</h6>
           {productPrice && <p class="card-text text-success">₱{productPrice}</p>}
-          <a href={`products/innovations/${productID}`} className="btn btn-primary">
+          <a href={`/${productID}`} className="btn btn-primary">
             View Item
           </a>
         </div>

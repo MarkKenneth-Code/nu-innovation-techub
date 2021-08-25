@@ -2,15 +2,15 @@
   width: 100%;
   height: 250px;
   object-fit: contain;
-  background-color: #efefef;
+  /* background-color: #efefef; */
 }
 
-.product-image {
+.product-image-center {
   width: 40%;
 }
 
 .product-image-header {
-  background-color: #efefef;
+  /* background-color: #efefef; */
   object-fit: contain;
 
   max-height: 470px;
@@ -34,7 +34,7 @@
 }
 
 @media only screen and (max-width: 991px) {
-  .product-image {
+  .product-image-center {
     width: 100%;
   }
 
