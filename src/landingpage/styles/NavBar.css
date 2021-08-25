@@ -19,3 +19,8 @@ small {
 .nav-link {
   color: white !important;
 }
+
+.navbar-mainlabel {
+  color: white;
+  font-size: large;
+}
