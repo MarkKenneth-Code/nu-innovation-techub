@@ -1,6 +1,6 @@
 export default function InquireNow() {
   return (
-    <section className="section-content-inquire" id="inquireNow">
+    <section className="section-content-inquire py-5" id="inquireNow">
       <div className="container py-5 ">
         <div className="container d-flex flex-column-reverse  align-items-center">
           <h2 className="fw-light text-uppercase text-gold">Inquire Now</h2>
@@ -8,16 +8,14 @@ export default function InquireNow() {
         </div>
         <div className="d-flex mt-5 px-5">
           <p className="text-center fw-light sm-text-truncate">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisi
-            condimentum in nibh cras. Sed quis fermentum elit venenatis dolor
-            posuere. Risus, tempor egestas nunc, enim. Id ac netus phasellus
-            aliquam blandit at proin egestas tincidunt. Sed maecenas ut aliquet
-            facilisis massa. Ut in sit vel enim viverra quam. Lorem ipsum dolor
-            sit amet, consectetur adipiscing elit. Sed nisi condimentum in nibh
-            cras. Sed quis fermentum elit venenatis dolor posuere. Risus, tempor
-            egestas nunc, enim. Id ac netus phasellus aliquam blandit at proin
-            egestas tincidunt. Sed maecenas ut aliquet facilisis massa. Ut in
-            sit vel enim viverra quam.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisi condimentum in nibh
+            cras. Sed quis fermentum elit venenatis dolor posuere. Risus, tempor egestas nunc, enim.
+            Id ac netus phasellus aliquam blandit at proin egestas tincidunt. Sed maecenas ut
+            aliquet facilisis massa. Ut in sit vel enim viverra quam. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Sed nisi condimentum in nibh cras. Sed quis fermentum elit
+            venenatis dolor posuere. Risus, tempor egestas nunc, enim. Id ac netus phasellus aliquam
+            blandit at proin egestas tincidunt. Sed maecenas ut aliquet facilisis massa. Ut in sit
+            vel enim viverra quam.
           </p>
         </div>
         <div className="d-flex justify-content-center align-items-center">
@@ -35,7 +33,7 @@ export default function InquireNow() {
               />
             </div>
             <div className="col-auto">
-              <button type="submit" class="btn btn-primary mt-3">
+              <button type="submit" className="btn btn-primary mt-3">
                 Submit
               </button>
             </div>
