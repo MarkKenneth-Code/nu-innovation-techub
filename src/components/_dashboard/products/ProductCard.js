@@ -56,14 +56,14 @@ export default function ShopProductCard({ product }) {
               component="span"
               variant="body1"
               sx={{
-                color: 'text.disabled',
+                color: 'red',
                 textDecoration: 'line-through'
               }}
             >
-              {/* {priceSale && fCurrency(priceSale)} */}
+              {priceSale && fCurrency(priceSale)}
             </Typography>
             &nbsp;
-            {/* {fCurrency(price)} */}
+            {fCurrency(price)}
             {price}
           </Typography>
         </Stack>

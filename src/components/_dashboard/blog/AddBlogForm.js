@@ -1,11 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/styles';
-import { TextField } from '@material-ui/core';
-import { FormControl } from '@material-ui/core';
-import NumberFormat from 'react-number-format';
-import PropTypes from 'prop-types';
-import { Form } from 'react-bootstrap';
-import { border, color, width } from '@material-ui/system';
+import { useForm } from 'react-hook-form';
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -25,23 +20,41 @@ const useStyles = makeStyles(() => ({
 }));
 
 export default function AddBlogForm() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors }
+  } = useForm();
+  const onSubmit = (data) => console.log(data);
   const classes = useStyles();
-  const [values, setValues] = React.useState({
-    textmask: '(1  )    -    '
-  });
-
-  const handleChange = (event) => {
-    setValues({
-      ...values,
-      [event.target.name]: event.target.value
-    });
-  };
   return (
-    <form className={classes.root} noValidate autoComplete="off">
+    <form onSubmit={handleSubmit(onSubmit)} className={classes.root}>
+      <input type="file" name="picture" accept="image/*" />
+      {/* use aria-invalid to indicate field contain error */}
+      <input
+        id="name"
+        aria-invalid={errors.name ? 'true' : 'false'}
+        {...register('name', { required: true, maxLength: 30 })}
+        placeholder="Title"
+      />
+      <input
+        id="description"
+        aria-invalid={errors.name ? 'true' : 'false'}
+        {...register('desription', { required: true, maxLength: 30 })}
+        placeholder="Description"
+      />
+      {/* use role="alert" to announce the error message */}
+      {errors.name && errors.name.type === 'required' && <span role="alert">tite</span>}
+      {errors.name && errors.name.type === 'maxLength' && (
+        <span role="alert">Max length exceeded</span>
+      )}
+    </form>
+  );
+}
+
+{
+  /* <form className={classes.root} noValidate autoComplete="off">
       <div>
-        {/* <Form.Group controlId="formFile" className={classes.filepicker}>
-          <Form.Control type="file" className={classes.button} />
-        </Form.Group> */}
         <Form.Group controlId="formFileSm">
           <Form.Control type="file" />
         </Form.Group>
@@ -52,6 +65,5 @@ export default function AddBlogForm() {
           <Form.Control size="lg" as="textarea" rows={7} placeholder="Description" />
         </Form.Group>
       </div>
-    </form>
-  );
+    </form> */
 }

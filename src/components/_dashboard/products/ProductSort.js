@@ -25,7 +25,8 @@ export default function ShopProductSort() {
   return (
     <>
       <Button
-        color="inherit"
+        variant="outlined"
+        color="secondary"
         disableRipple
         onClick={handleOpen}
         endIcon={<Icon icon={open ? chevronUpFill : chevronDownFill} />}
