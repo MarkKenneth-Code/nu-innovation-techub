@@ -49,7 +49,7 @@ export const FILTER_COLOR_OPTIONS = [
 
 ShopFilterSidebar.propTypes = {
   isOpenFilter: PropTypes.bool,
-  onResetFilter: PropTypes.func,
+  onSubmit: PropTypes.func,
   onOpenFilter: PropTypes.func,
   onCloseFilter: PropTypes.func,
   formik: PropTypes.object
@@ -57,7 +57,7 @@ ShopFilterSidebar.propTypes = {
 
 export default function ShopFilterSidebar({
   isOpenFilter,
-  onResetFilter,
+  onSubmit,
   onOpenFilter,
   onCloseFilter,
   formik
@@ -109,7 +109,7 @@ export default function ShopFilterSidebar({
                 <AddBlogForm />
               </Stack>
             </Scrollbar>
-
+            {/* 
             <Box sx={{ p: 3 }}>
               <Button
                 fullWidth
@@ -117,11 +117,11 @@ export default function ShopFilterSidebar({
                 type="submit"
                 color="secondary"
                 variant="contained"
-                onClick={onResetFilter}
+                onClick={console.log('Hello amiel')}
               >
                 Add
               </Button>
-            </Box>
+            </Box> */}
           </Drawer>
         </Form>
       </FormikProvider>
