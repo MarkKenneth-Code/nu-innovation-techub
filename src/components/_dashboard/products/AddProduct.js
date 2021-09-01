@@ -108,7 +108,7 @@ export default function ShopFilterSidebar({
               </Stack>
             </Scrollbar>
 
-            <Box sx={{ p: 3 }}>
+            {/* <Box sx={{ p: 3 }}>
               <Button
                 fullWidth
                 size="large"
@@ -119,7 +119,7 @@ export default function ShopFilterSidebar({
               >
                 Add
               </Button>
-            </Box>
+            </Box> */}
           </Drawer>
         </Form>
       </FormikProvider>

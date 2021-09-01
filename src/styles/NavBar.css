@@ -17,19 +17,20 @@ small {
   border: 1px solid gray;
   padding: 10px 15px;
   margin-bottom: 15px;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 #description {
   display: block;
   box-sizing: border-box;
+  text-align: justify;
   width: 100%;
-  height: 150px;
+  height: 160px;
   border-radius: 4px;
   border: 1px solid gray;
   padding: 10px 15px;
   margin-bottom: 15px;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 #price {
@@ -41,7 +42,47 @@ small {
   border: 1px solid gray;
   padding: 10px 15px;
   margin-bottom: 15px;
-  font-size: 20px;
+  font-size: 15px;
+}
+
+#submitBtnArticle {
+  position: relative;
+  margin-top: 23%;
+  cursor: pointer;
+  text-align: center;
+  color: white;
+  background-color: #354092;
+  text-decoration: none;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  height: 45px;
+}
+
+#submitBtnProduct {
+  position: relative;
+  margin-top: 10%;
+  cursor: pointer;
+  text-align: center;
+  color: white;
+  background-color: #354092;
+  text-decoration: none;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  height: 45px;
+}
+
+#categorySelect {
+  border: 1px solid gray;
+}
+
+#submitBtnArticle:hover {
+  background-color: #d8b638;
+}
+
+#submitBtnProduct:hover {
+  background-color: #d8b638;
 }
 
 .form {

@@ -63,29 +63,35 @@ export default function AddProductForms() {
       <input
         id="name"
         aria-invalid={errors.name ? 'true' : 'false'}
-        {...register('name', { required: true, maxLength: 30 })}
+        {...register('name', { required: true, maxLength: 10000 })}
         placeholder="Product Name"
       />
-      <input
+      <textarea
         id="description"
         aria-invalid={errors.name ? 'true' : 'false'}
-        {...register('desription', { required: true, maxLength: 30 })}
+        {...register('desription', { required: true, maxLength: 1000000 })}
         placeholder="Description"
       />
       {/* use role="alert" to announce the error message */}
-      {errors.name && errors.name.type === 'required' && <span role="alert">tite</span>}
+      {/* {errors.name && errors.name.type === 'required' && <span role="alert">tite</span>}
       {errors.name && errors.name.type === 'maxLength' && (
         <span role="alert">Max length exceeded</span>
-      )}
+      )} */}
 
       <input id="price" type="number" name="priceProduct" accept="image/*" placeholder="Price" />
-      <input
-        id="price"
-        type="number"
-        name="priceProduct"
-        accept="image/*"
-        placeholder="Sale Price"
-      />
+      <input id="price" type="number" name="salePrice" accept="image/*" placeholder="Sale Price" />
+
+      <div class="form-floating">
+        <select class="form-select" id="categorySelect">
+          <option selected>Open this select menu</option>
+          <option value="1">Category 1</option>
+          <option value="2">Category 2</option>
+          <option value="3">Category 3</option>
+        </select>
+        <label for="floatingSelect">Category</label>
+      </div>
+
+      <input id="submitBtnProduct" type="submit" />
     </form>
   );
 }

@@ -64,20 +64,20 @@ export default function AddBlogForm() {
         {...register('name', { required: true, maxLength: 10000 })}
         placeholder="Title"
       />
-      <input
+      <textarea
         id="description"
-        aria-invalid={errors.name ? 'true' : 'false'}
+        aria-invalid={errors.description ? 'true' : 'false'}
         {...register('description', { required: true, maxLength: 1000000 })}
         placeholder="Description"
       />
       {/* use role="alert" to announce the error message */}
-      {errors.name && errors.name.type === 'required' && (
+      {/* {errors.name && errors.name.type === 'required' && (
         <span role="alert">Please fill out the form.</span>
       )}
       {errors.name && errors.name.type === 'maxLength' && (
         <span role="alert">Max length exceeded</span>
-      )}
-      <input type="submit" />
+      )} */}
+      <input id="submitBtnArticle" type="submit" />
     </form>
   );
 }
