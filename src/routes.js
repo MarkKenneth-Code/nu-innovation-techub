@@ -18,11 +18,15 @@ import Souvenirs from './mainpage/components/products/Souvenirs';
 import Achievement from './mainpage/components/innovators/Achievement';
 import Innovator from './mainpage/components/innovators/Innovator';
 import ProductDetail from './landingpage/components/products/ProductDetail';
-
+import Login from './pages/Login';
 // const Home = lazy(() => import('./mainpage/pages/Home'));
 
 export default function Router() {
   return useRoutes([
+    {
+      path: '/login',
+      element: <Login />
+    },
     {
       path: '/dashboard',
       element: <DashboardLayout />,
