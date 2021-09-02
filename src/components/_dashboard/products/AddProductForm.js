@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/styles';
 import NumberFormat from 'react-number-format';
 import PropTypes from 'prop-types';
 import { useForm } from 'react-hook-form';
+import Axios from 'axios';
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -53,23 +54,62 @@ export default function AddProductForms() {
     handleSubmit,
     formState: { errors }
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+
+  const onSubmit = async (data) => {
+    console.log(data);
+
+    const productImage = data.productImage[0];
+    const productName = data.productName;
+    const productDescription = data.productDescription;
+    const productPrice = data.productPrice;
+    const salePrice = data.salePrice;
+    const productCategory = data.productCategory;
+
+    const formData = new FormData();
+    formData.append('file', productImage);
+    formData.append('upload_preset', 'kbusolgc');
+    await Axios.post('https://api.cloudinary.com/v1_1/dy5g3pexw/image/upload', formData).then(
+      (response, err) => {
+        if (!err) {
+          console.log(response.data.secure_url);
+          const obj = {
+            imagePath: response.data.secure_url,
+            productName: productName,
+            productDescription: productDescription,
+            productPrice: productPrice,
+            salePrice: salePrice,
+            productCategory: productCategory,
+            dateAdded: `${new Date().getUTCMonth()}/${new Date().getUTCDate()}/${new Date().getUTCFullYear()}`
+          };
+          Axios.post('http://localhost:3001/product/addProduct', obj).then((response) => {
+            console.log(response);
+          });
+        }
+      }
+    );
+  };
+  // const onSubmit = (data) => console.log(data);
   const classes = useStyles();
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={classes.root}>
-      <input type="file" name="picture" accept="image/*" />
+      <input
+        type="file"
+        name="picture"
+        accept="image/*"
+        {...register('productImage', { required: true })}
+      />
       {/* use aria-invalid to indicate field contain error */}
       <input
         id="name"
         aria-invalid={errors.name ? 'true' : 'false'}
-        {...register('name', { required: true, maxLength: 10000 })}
+        {...register('productName', { required: true, maxLength: 10000 })}
         placeholder="Product Name"
       />
       <textarea
         id="description"
         aria-invalid={errors.name ? 'true' : 'false'}
-        {...register('desription', { required: true, maxLength: 1000000 })}
+        {...register('productDescription', { required: true, maxLength: 1000000 })}
         placeholder="Description"
       />
       {/* use role="alert" to announce the error message */}
@@ -78,15 +118,33 @@ export default function AddProductForms() {
         <span role="alert">Max length exceeded</span>
       )} */}
 
-      <input id="price" type="number" name="priceProduct" accept="image/*" placeholder="Price" />
-      <input id="price" type="number" name="salePrice" accept="image/*" placeholder="Sale Price" />
+      <input
+        id="price"
+        type="number"
+        name="priceProduct"
+        accept="image/*"
+        placeholder="Price"
+        {...register('productPrice', { required: true })}
+      />
+      <input
+        id="price"
+        type="number"
+        name="salePrice"
+        accept="image/*"
+        placeholder="Sale Price"
+        {...register('salePrice', { required: true })}
+      />
 
       <div class="form-floating">
-        <select class="form-select" id="categorySelect">
+        <select
+          class="form-select"
+          id="categorySelect"
+          {...register('productCategory', { required: true })}
+        >
           <option selected>Open this select menu</option>
-          <option value="1">Category 1</option>
-          <option value="2">Category 2</option>
-          <option value="3">Category 3</option>
+          <option value="Books">Books</option>
+          <option value="Innovations">Innovations</option>
+          <option value="Souvenirs">Souvenirs</option>
         </select>
         <label for="floatingSelect">Category</label>
       </div>
