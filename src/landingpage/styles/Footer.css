@@ -44,3 +44,9 @@ label svg {
 input {
   margin-top: 12px;
 }
+
+.footer-logo {
+  margin-top: 15px;
+  margin-left: 10px;
+  width: 80px;
+}

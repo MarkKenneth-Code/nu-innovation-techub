@@ -1,5 +1,5 @@
 import DTILogo from '../../assets/DTI.png';
-import NULogo from '../../assets/NU-Logo-old.png';
+import NULogo from '../../assets/NU-Logo-home.png';
 import '../../styles/Footer.css';
 
 export default function Footer() {
@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="col-12 col-sm-12 col-md-6 col-lg-5 col-xl-4 ">
             <div className="footer-copyright py-3">
               <img src={DTILogo} alt="" />
-              <img src={NULogo} alt="" />
+              <img src={NULogo} alt="" className="footer-logo" />
               <p className="mt-3 mb-0">Copyright © NU Innovations Tech Hub</p>
               <p>© 2021. All rights reserved</p>
             </div>

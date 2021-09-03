@@ -50,7 +50,7 @@ export default function DashboardSidebar({ isOpenSidebar, onCloseSidebar }) {
       }}
     >
       <Box sx={{ px: 2.5, py: 3 }}>
-        <Box component={RouterLink} to="/" sx={{ display: 'inline-flex', textDecoration: 'none' }}>
+        <Box sx={{ display: 'inline-flex', textDecoration: 'none' }}>
           <Logo />
           <span>&nbsp;&nbsp;&nbsp;</span>
           <span className="navbar-label">

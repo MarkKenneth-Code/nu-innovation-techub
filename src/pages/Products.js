@@ -44,28 +44,35 @@ export default function EcommerceShop() {
   return (
     <Page title="Products | NU Innovation Tech Hub">
       <Container>
-        <Typography variant="h4" sx={{ mb: 5 }}>
-          Products
-        </Typography>
+        <div>
+          <Typography variant="h4" sx={{ mb: 5 }}>
+            Products
+          </Typography>
 
-        <Stack
-          direction="row"
-          flexWrap="wrap-reverse"
-          alignItems="center"
-          justifyContent="flex-end"
-          sx={{ mb: 5 }}
-        >
-          <Stack direction="row" spacing={1} flexShrink={0} sx={{ my: 1 }}>
-            <AddProduct
-              formik={formik}
-              isOpenFilter={openFilter}
-              onResetFilter={handleResetFilter}
-              onOpenFilter={handleOpenFilter}
-              onCloseFilter={handleCloseFilter}
-            />
-            <ProductSort />
+          <Stack
+            direction="row"
+            flexWrap="wrap-reverse"
+            alignItems="center"
+            justifyContent="flex-end"
+            sx={{ mb: 7 }}
+          >
+            <Stack direction="column" spacing={1} flexShrink={0} sx={{ my: 0 }}>
+              <AddProduct
+                formik={formik}
+                isOpenFilter={openFilter}
+                onResetFilter={handleResetFilter}
+                onOpenFilter={handleOpenFilter}
+                onCloseFilter={handleCloseFilter}
+              />
+              <select id="filter" className="form-select form-select-sm mb-3">
+                <option selected value="Recent">
+                  Recent
+                </option>
+                <option value="Relevance">Relevance</option>
+              </select>
+            </Stack>
           </Stack>
-        </Stack>
+        </div>
 
         <ProductList products={PRODUCTS} />
         {/* <ProductCartWidget /> */}

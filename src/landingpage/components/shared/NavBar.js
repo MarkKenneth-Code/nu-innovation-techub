@@ -5,7 +5,7 @@ export default function NavBar() {
   return (
     <Navbar expand="xl" variant="dark" className="navbar-bg">
       <Container>
-        <Navbar.Brand className="d-flex" href="/home">
+        <Navbar.Brand className="d-flex" href="/">
           <img src={NULogo} alt="" className="pr-2 d-none d-sm-block" />
           <span>&nbsp;&nbsp;&nbsp;</span>
           <span className="navbar-label">
