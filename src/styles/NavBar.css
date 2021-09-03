@@ -46,7 +46,7 @@ small {
 }
 
 #submitBtnArticle {
-  position: absolute;
+  position: inherit;
   bottom: 0;
   left: 0;
   cursor: pointer;
@@ -61,7 +61,7 @@ small {
 }
 
 #submitBtnProduct {
-  position: absolute;
+  position: inherit;
   bottom: 0;
   left: 0;
   cursor: pointer;
