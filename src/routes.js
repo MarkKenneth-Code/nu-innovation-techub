@@ -19,6 +19,7 @@ import Achievement from './mainpage/components/innovators/Achievement';
 import Innovator from './mainpage/components/innovators/Innovator';
 import ProductDetail from './landingpage/components/products/ProductDetail';
 import Login from './pages/Login';
+import AdminProfile from './pages/AdminProfile';
 // const Home = lazy(() => import('./mainpage/pages/Home'));
 
 export default function Router() {
@@ -35,7 +36,8 @@ export default function Router() {
         { path: 'app', element: <DashboardApp /> },
         { path: 'user', element: <User /> },
         { path: 'products', element: <Products /> },
-        { path: 'blog', element: <Blog /> }
+        { path: 'blog', element: <Blog /> },
+        { path: 'profile', element: <AdminProfile /> }
       ]
     },
     {

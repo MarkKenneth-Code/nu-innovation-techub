@@ -34,9 +34,9 @@ import USERLIST from '../_mocks_/user';
 const TABLE_HEAD = [
   { id: 'name', label: 'Name', alignRight: false },
   { id: 'company', label: 'Company', alignRight: false },
-  { id: 'role', label: 'Role', alignRight: false },
-  { id: 'isVerified', label: 'Verified', alignRight: false },
-  { id: 'status', label: 'Status', alignRight: false },
+  // { id: 'role', label: 'Role', alignRight: false },
+  // { id: 'isVerified', label: 'Verified', alignRight: false },
+  // { id: 'status', label: 'Status', alignRight: false },
   { id: '' }
 ];
 
@@ -167,13 +167,13 @@ export default function User() {
             Registered User
           </Typography>
           <Stack direction="row" spacing={1} flexShrink={0} sx={{ my: 1 }}>
-            <AddUserModal
+            {/* <AddUserModal
               formik={formik}
               isOpenFilter={openFilter}
               onResetFilter={handleResetFilter}
               onOpenFilter={handleOpenFilter}
               onCloseFilter={handleCloseFilter}
-            />
+            /> */}
           </Stack>
         </Stack>
 
@@ -219,24 +219,24 @@ export default function User() {
                             />
                           </TableCell>
                           <TableCell component="th" scope="row" padding="none">
-                            <Stack direction="row" alignItems="center" spacing={2}>
-                              <Avatar alt={name} src={avatarUrl} />
+                            <Stack direction="row" alignItems="left" spacing={10}>
+                              {/* <Avatar alt={name} src={avatarUrl} /> */}
                               <Typography variant="subtitle2" noWrap>
                                 {name}
                               </Typography>
                             </Stack>
                           </TableCell>
                           <TableCell align="left">{company}</TableCell>
-                          <TableCell align="left">{role}</TableCell>
-                          <TableCell align="left">{isVerified ? 'Yes' : 'No'}</TableCell>
-                          <TableCell align="left">
+                          {/* <TableCell align="left">{role}</TableCell> */}
+                          {/* <TableCell align="left">{isVerified ? 'Yes' : 'No'}</TableCell> */}
+                          {/* <TableCell align="left">
                             <Label
                               variant="ghost"
                               color={(status === 'banned' && 'error') || 'success'}
                             >
                               {sentenceCase(status)}
                             </Label>
-                          </TableCell>
+                          </TableCell> */}
 
                           <TableCell align="right">
                             <UserMoreMenu />
